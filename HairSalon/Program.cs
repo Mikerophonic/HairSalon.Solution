@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using ToDoList.Models;
+using HairSalon.Models;
 
 namespace HairSalon
 {
@@ -14,7 +14,7 @@ namespace HairSalon
 
       builder.Services.AddControllersWithViews();
       // be sure to update the line below for your project
-      builder.Services.AddDbContext<ToDoListContext>(
+      builder.Services.AddDbContext<HairSalonContext>(
                         dbContextOptions => dbContextOptions
                           .UseMySql(
                             builder.Configuration     ["ConnectionStrings:DefaultConnection"],      ServerVersion.AutoDetect(builder.   Configuration    ["ConnectionStrings:DefaultConnection"]

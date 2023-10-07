@@ -2,16 +2,16 @@
   Layout = "_Layout";
 }
 
-@model HairSalon.Models.Item
+@model HairSalon.Models.Client
 <p><strong>NOTE:</strong> You need to have at least one stylist before you can add a client!</p>
 <p>Go to @Html.ActionLink("this page", "Create", "Stylists") to add a stylist.</p>
-<h4>Add a new item</h4>
+<h4>Add a new client</h4>
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Description)
-  @Html.TextBoxFor(model => model.Description)
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
 
-  @Html.LabelFor(model => model.Category)
+  @Html.LabelFor(model => model.Stylist)
 
   @Html.DropDownList("StylistId")
   
