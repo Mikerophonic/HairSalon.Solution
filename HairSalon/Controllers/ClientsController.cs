@@ -17,11 +17,27 @@ namespace HairSalon.Controllers
       _db = db;
     }
 
-    public ActionResult Create()
+    public ActionResult Create(int stylistId)
     {
+        var client = new Client
+        {
+            StylistId = stylistId
+        };
         SelectList selectList = new SelectList(_db.Stylists, "StylistId", "Name");
         ViewBag.StylistId = selectList;
-        return View();
+        return View(client);
     }
+
+    [HttpPost]
+    public ActionResult Create(Client client)
+    {
+      if (client.StylistId == 0)
+      {
+        return RedirectToAction("Create");
+      }
+      _db.Clients.Add(client);
+      _db.SaveChanges();
+     return RedirectToAction("Details", "Stylists", new { id = client.StylistId });    
+     }
   }
 }

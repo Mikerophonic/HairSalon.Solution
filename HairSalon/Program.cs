@@ -13,7 +13,6 @@ namespace HairSalon
       WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
       builder.Services.AddControllersWithViews();
-      // be sure to update the line below for your project
       builder.Services.AddDbContext<HairSalonContext>(
                         dbContextOptions => dbContextOptions
                           .UseMySql(
