@@ -7,6 +7,9 @@
 
 <h2>Stylist Details</h2>
 <hr />
+
+<div class="container">
+
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
 
 @if (@Model.Clients.Count == 0)
@@ -23,7 +26,9 @@ else
     }
   </ul>
 }
-
+</div>
 <p>@Html.ActionLink("Add a new client", "Create", "Clients", new { stylistId = Model.StylistId }, null)</p>
 
 <p>@Html.ActionLink("Back to stylists list", "Index")</p>
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
