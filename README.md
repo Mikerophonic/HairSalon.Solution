@@ -2,13 +2,21 @@
 
 This is a web application for managing stylists and clients for a hair salon.
 
+#### By Michael G Connelly
+
 ## Technologies Used
 
 - ASP.NET Core
 - Entity Framework Core
-- SQL Server (or your chosen database)
+- SQL Server 
+- Razor pages
+- C#
 - HTML, CSS, and JavaScript
-- Bootstrap (for styling)
+- Bootstrap 
+
+## Description
+
+This project was created as my third independent project, "Database Basics", in the C# / .Net course at Epicodus. It demonstrates my understanding of building an MVC app and connecting it to a database using Entity Framework Core.
 
 ## Setup and Installation
 
@@ -24,3 +32,47 @@ Follow these steps to set up and run the Hair Salon web application locally.
 ```bash
 git clone https://github.com/your-username/HairSalon.git
 cd HairSalon
+```
+
+### Setup database
+
+Create a new file named `appsettings.json` in the project's root directory:
+
+```bash
+   $ touch appsettings.json
+```
+
+Open the appsettings.json file and insert the following code. Replace [YOUR-USERNAME] and [YOUR-MYSQL-PASSWORD] with your MySQL username and password:
+
+```bash
+    {
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port=3306;database=your_database_name;uid=[YOUR-USERNAME];pwd=[YOUR-MYSQL-PASSWORD];"
+    }
+```
+
+<b>Create Database:</b> Follow the instructions provided in the LearnHowToProgram.com lesson titled <a href="https://www.learnhowtoprogram.com/c-and-net/database-basics/creating-a-test-database-exporting-and-importing-databases-with-mysql-workbench">"Creating a Test Database: Exporting and Importing Databases with MySQL Workbench"</a>. Use the michael_connelly.sql file located in the project's root directory to create a new database in MySQL Workbench with the desired database name.
+
+Navigate to the project directory:
+```bash
+    $ cd HairSalon
+```
+
+Start the project in development mode with a watcher using the following command:
+```bash
+    $ dotnet watch run
+```
+
+## Known Bugs
+
+No known bugs.
+
+
+## License
+MIT
+Copyright (c) 2023 Michael G Connelly
+
+
+
+
+
