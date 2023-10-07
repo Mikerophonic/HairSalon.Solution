@@ -1,4 +1,4 @@
-# Hair Salon Web Application
+# Eau Claire's Hair Salon
 
 This is a web application for managing stylists and clients for a hair salon.
 
